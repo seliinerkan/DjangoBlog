@@ -22,31 +22,7 @@ def register(request):
             "form" : form
         }
     return render(request,"register.html", context)
-
-
-    """if request.method == "POST":
-        form = RegisterForm(request.POST)
-        if form.is_valid():
-            username = form.cleaned_data.get("username")
-            password = form.cleaned_data.get("password")
-
-            newUser = User(username =username)
-            newUser.set_password(password)
-            newUser.save()
-            login(request, newUser)
-            return redirect("index")
-        context = {
-            "form" : form
-        }
-        return render(request,"register.html", context)
-    else:
-        form = RegisterForm()
-        context = {
-            "form" : form
-        }
-        return render(request,"register.html", context)"""
     
-
 def loginUser(request):
     form = LoginForm(request.POST or None)
     context = {
@@ -69,4 +45,7 @@ def loginUser(request):
     return render(request,"login.html",context)
 
 def logoutUser(request):
-    return render(request,"logout.html")
+    logout(request)
+    messages.success(request,"Başarıyla Çıkış Yapıldı")
+    return redirect("index")
+    

@@ -4,7 +4,15 @@
 
 <div class="jumbotron text-center">
   <h3>Django Bloğuna Hoşgeldiniz</h3>
-  <p>Bu blogta yazılarınızı paylaşabilirsiniz</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt tenetur repudiandae temporibus aliquam quisquam hic repellendus quis ullam cum eum?</p>
+
+      {% if request.user.is_authenticated  %}
+          Giriş Yapıldı,{{request.user.username}}
+
+      {% else %}
+          Giriş Yapılmamış
+
+      {% endif %}
 </div>
 {% for number in numbers %}
 <li>{{number}}</li>
