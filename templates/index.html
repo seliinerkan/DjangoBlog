@@ -1,0 +1,13 @@
+{% extends "layout.html"%} 
+
+{% block body %}
+
+<div class="jumbotron text-center">
+  <h3>Django Bloğuna Hoşgeldiniz</h3>
+  <p>Bu blogta yazılarınızı paylaşabilirsiniz</p>
+</div>
+{% for number in numbers %}
+<li>{{number}}</li>
+
+{% endfor %}
+{% endblock body %}
