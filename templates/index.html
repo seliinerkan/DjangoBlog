@@ -1,21 +1,12 @@
-{% extends "layout.html"%} 
+{% extends "layout.html" %}
 
 {% block body %}
 
-<div class="jumbotron text-center">
-  <h3>Django Bloğuna Hoşgeldiniz</h3>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt tenetur repudiandae temporibus aliquam quisquam hic repellendus quis ullam cum eum?</p>
-
-      {% if request.user.is_authenticated  %}
-          Giriş Yapıldı,{{request.user.username}}
-
-      {% else %}
-          Giriş Yapılmamış
-
-      {% endif %}
+<div class="jumbotron text-center" style="background-color:rgba(230, 255, 230, 0.6)">
+        <h3>Selin Erkan'ın Blog Sitesine Hoşgeldiniz</h3>
+        <p></p>
 </div>
-{% for number in numbers %}
-<li>{{number}}</li>
 
-{% endfor %}
+
 {% endblock body %}
+
