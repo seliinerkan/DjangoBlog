@@ -2,6 +2,6 @@
 
 
 ## Screenshots
-[](ss/add_article.png)
+[image](ss/add_article.png)
 
 
